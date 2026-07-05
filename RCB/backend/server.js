@@ -171,7 +171,7 @@ function runMatchSimulator() {
         liveMatch.commentaries.unshift(`${currentOver}.${currentBall}: ${liveMatch.teamB.bowler.name} to ${striker.name}, ${commentaryTemplates.wicket[Math.floor(Math.random() * commentaryTemplates.wicket.length)]}`);
         liveMatch.teamA.batsmen = liveMatch.teamA.batsmen.filter(b => b.name !== striker.name);
         liveMatch.teamB.bowler.wickets++;
-        
+
         // Bring in next batsman
         const activeNames = liveMatch.teamA.batsmen.map(b => b.name);
         const nextBatsman = batsmenList.find(b => !activeNames.includes(b.name));

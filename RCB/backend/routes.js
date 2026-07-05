@@ -178,34 +178,23 @@ router.post("/cheers/:id/like", async (req, res) => {
 
 // Global live match state (will be updated by the simulator in server.js)
 export const liveMatch = {
-  status: "MATCH OVER",
-  overs: "18.0",
-  target: 156,
-  result: "RCB won by 5 wickets (12 balls left)",
+  status: "NO LIVE MATCH",
+  overs: "0.0",
+  target: 0,
+  result: "No live matches currently scheduled.",
   teamA: {
     name: "RCB",
     logo: "🔴⚫",
-    score: "161/5",
-    batsmen: [
-      { name: "Virat Kohli", runs: 72, balls: 48, fours: 6, sixes: 3, isStriker: true },
-      { name: "Dinesh Karthik", runs: 28, balls: 14, fours: 3, sixes: 1, isStriker: false }
-    ]
+    score: "N/A",
+    batsmen: []
   },
   teamB: {
-    name: "GT",
+    name: "TBD",
     logo: "⚡",
-    score: "155/8 (20.0)",
-    bowler: { name: "Rashid Khan", overs: "4.0", runs: 28, wickets: 2 }
+    score: "N/A",
+    bowler: { name: "N/A", overs: "0.0", runs: 0, wickets: 0 }
   },
-  commentaries: [
-    "18.0: Rashid Khan to Dinesh Karthik, FOUR runs, sweeps it away past square leg for a boundary! RCB wins the IPL Final by 5 wickets with 12 balls left! The crowd is absolutely ecstatic! Ee Sala Cup Namde! 🏆🔴⚫",
-    "17.5: Rashid to Karthik, 1 run, pushes it down to long-on.",
-    "17.4: Rashid to Kohli, 1 run, tucked away to deep midwicket.",
-    "17.3: Rashid to Kohli, SIX runs, outstanding! Steps down the pitch and launches it straight over Rashid's head!",
-    "17.2: Rashid to Karthik, 1 run, steered to third man.",
-    "17.1: Rashid to Kohli, 1 run, driven to sweeper cover.",
-    "16.6: Mohit to Kohli, 1 run, worked to deep square leg to end the over."
-  ]
+  commentaries: []
 };
 
 const fixtures = [
